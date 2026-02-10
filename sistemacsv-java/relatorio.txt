@@ -1,0 +1,16 @@
+===== RELATÓRIO OPERACIONAL =====
+Total de registros: 3
+Valor total: R$ 3.501,25
+Valor médio: R$ 1.167,08
+Maior valor: R$ 1.500,50
+Menor valor: R$ 800,00
+
+Detalhamento:
+2024-01-05 | Abastecimento | R$ 1.500,50
+2024-01-10 | Manutencao | R$ 800,00
+2024-01-15 | Frete | R$ 1.200,75
+
+Resumo por tipo:
+Frete: R$ 1.200,75
+Manutencao: R$ 800,00
+Abastecimento: R$ 1.500,50
