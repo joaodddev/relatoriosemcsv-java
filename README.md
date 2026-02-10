@@ -1,8 +1,8 @@
-# 📊 Sistema de Leitura de CSV e Geração de Relatório – Java
+# 📊 Sistema de Leitura de CSV e Geração de Relatório Operacional – Java
 
-Projeto desenvolvido em **Java puro** com o objetivo de simular a leitura de dados em formato CSV, processar as informações e gerar um **relatório operacional com indicadores (KPIs)**.
+Projeto desenvolvido em **Java puro** com o objetivo de simular a leitura de dados em formato CSV, processar as informações e gerar um **relatório operacional com indicadores (KPIs)**, exibido no terminal **e exportado para arquivo `.txt`**.
 
-O sistema foi pensado para demonstrar lógica de programação, boas práticas de organização de código e conceitos de **Programação Orientada a Objetos (POO)**, mesmo em um ambiente simples (arquivo único).
+O sistema foi construído com foco em **Programação Orientada a Objetos (POO)**, organização de código e regras de negócio, utilizando uma estrutura profissional de pastas no VS Code.
 
 ---
 
@@ -10,8 +10,8 @@ O sistema foi pensado para demonstrar lógica de programação, boas práticas d
 
 - Leitura de dados simulados em formato CSV
 - Conversão e tratamento de dados
-- Filtro de registros por **período (datas)**
-- Geração de KPIs:
+- **Filtro de registros por período (datas)**
+- Geração de KPIs operacionais:
   - Total de registros
   - Valor total
   - Valor médio
@@ -19,6 +19,24 @@ O sistema foi pensado para demonstrar lógica de programação, boas práticas d
 - Detalhamento completo das operações
 - **Agrupamento por tipo de operação** (ex: Abastecimento, Frete, Manutenção)
 - Formatação monetária no padrão brasileiro (R$)
+- **Exportação do relatório para arquivo `.txt`**
+- Exibição do relatório no terminal
+
+---
+
+## 🗂️ Estrutura do Projeto
+sistema-relatorio-csv-java
+├── src
+│ ├── Main.java
+│ ├── model
+│ │ └── Registro.java
+│ ├── service
+│ │ └── RelatorioService.java
+│ └── util
+│ ├── CsvReader.java
+│ └── ArquivoUtil.java
+├── relatorio.txt
+└── README.md
 
 ---
 
@@ -29,14 +47,14 @@ O sistema foi pensado para demonstrar lógica de programação, boas práticas d
 - Collections (`List`, `Map`)
 - `LocalDate` e `DateTimeFormatter`
 - Regras de negócio
-- Organização e separação de responsabilidades
-- Simulação de leitura de CSV
+- Separação de responsabilidades (`model`, `service`, `util`)
+- Manipulação de strings e dados
+- Escrita de arquivos (`FileWriter`)
+- Formatação monetária com `DecimalFormat`
 
 ---
 
-## ▶️ Exemplo de Saída
-
-```text
+## ▶️ Exemplo de Saída no Terminal
 ===== RELATÓRIO OPERACIONAL =====
 Total de registros: 3
 Valor total: R$ 3.501,25
@@ -56,8 +74,27 @@ Abastecimento: R$ 1.500,50
 
 ---
 
-👤 Autor
+## 📄 Exportação do Relatório
 
-Projeto desenvolvido por João Victor
-🔗 GitHub: [perfil](https://github.com/joaodddev)
-🔗 LinkedIn: [perfil](https://www.linkedin.com/in/joao-victor-macedo-neves/)
+Além da exibição no terminal, o sistema gera automaticamente um arquivo:
+relatorio.txt
+
+Esse arquivo contém exatamente o mesmo conteúdo exibido no console, simulando um cenário real de geração de relatórios operacionais.
+
+---
+
+## 🚀 Como Executar o Projeto
+
+### Pré-requisitos
+- Java JDK 17 ou superior
+- VS Code (ou outra IDE Java)
+
+### Execução
+1. Clone o repositório
+2. Abra a pasta no VS Code
+3. Execute o arquivo `Main.java`
+
+Ou via terminal:
+```bash
+javac src/**/*.java
+java -cp src Main```
